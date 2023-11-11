@@ -21,9 +21,19 @@ type Vector = {
   
     // Crtanje igrača na canvasu
     draw(context: CanvasRenderingContext2D) {
-      context.fillStyle = this.color;
-      context.fillRect(this.position.x, this.position.y, this.size, this.size);
-    }
+        // Postavljanje sjena
+        context.shadowColor = 'rgba(0, 0, 0, 0.7)'; // Boja sjene
+        context.shadowBlur = 10; 
+        context.shadowOffsetX = 5; // Horizontalni pomak sjene
+        context.shadowOffsetY = 5; // Vertikalni pomak sjene
+    
+        // Crtanje igrača
+        context.fillStyle = this.color;
+        context.fillRect(this.position.x, this.position.y, this.size, this.size);
+    
+        // Resetiranje postavki sjene
+        context.shadowColor = 'transparent';
+      }
   }
   
   export default Player;

@@ -109,16 +109,7 @@ const GameCanvas = () => {
   // JSX za renderiranje komponente
   return (
     <div>
-  <canvas 
-        ref={canvasRef} 
-        style={{
-          width: '90%', 
-          height: '90vh', 
-          margin: '5vh auto', 
-          border: '2px solid black', 
-          display: 'block' 
-        }}
-      ></canvas>
+  <canvas ref={canvasRef} ></canvas>
   {gameOver && (
     <div style={{
       position: 'absolute', 
